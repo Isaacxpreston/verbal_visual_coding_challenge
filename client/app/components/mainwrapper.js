@@ -31,15 +31,31 @@ const Main = React.createClass({
 				<Layer zIndex="2">
 					<Component resize>
 						<div style={{
-							margin: "auto",
+							marginTop: "auto",
+							marginBottom: "auto",
+							marginLeft: "auto",
 							width: "40%",
 							background: "maroon",
 						}}>
-						here is the title section
-						<div>
-						AAAAHHHH
+							<div>
+								from factory
+							</div>
+							<div>
+								to store
+							</div>
+							<div>
+								to out the door.
+							</div>
+							<div>
+								abc creations offers end-to-end apparel
+								manufacturing solutions for forward thinking clothing brands
+							</div>
+							<div>
+								<button>our process</button>
+								<button>our products</button>
+							</div>
 						</div>
-						</div>
+
 					</Component>
 
 					<Component background="white" padding="7.5em">
@@ -64,20 +80,16 @@ const Main = React.createClass({
 						}}>
 							here is the footer
 						</div>
-
 					</Component>
-
-					{/*<Component background="white" padding="7.5em">
-
-					</Component>*/}
 
 				</Layer>
 
 				<Layer zIndex="3">
 					<div style={{
-						height: "2.75em",
+						height: "40px",
 						textAlign: "center",
 						position: "fixed",
+						bottom: window.innerHeight - 40, //yeaaauuhh
 						width: "100%",
 						background: "navy"
 					}}>
