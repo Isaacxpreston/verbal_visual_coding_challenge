@@ -18,6 +18,7 @@ const Component = React.createClass({
 			window.addEventListener("resize", this.resize)
 			this.resize()
 		}
+
 	},
 
 	render() {
@@ -25,6 +26,7 @@ const Component = React.createClass({
 			<div style={{
 				height: this.state.height,
 				background: this.props.background,
+				padding: this.props.padding,
 				...styles.content
 			}}>
 				{this.props.children}

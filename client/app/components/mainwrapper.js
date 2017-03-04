@@ -3,7 +3,6 @@ import {Link, browserHistory} from 'react-router'
 import {connect} from 'react-redux'
 
 import '../fonts/open_sans.css'
-// import styles from '../styles/mainwrapper_styles'
 
 import Component from './component'
 import Layer from './layer'
@@ -13,10 +12,12 @@ const Main = React.createClass({
 	//todo
 		//scroll speed on layers
 
+		//set navbar top position right below background image dimensions
+		//change immediately on scroll
+
 	render() {
 		return (
 			<div>
-
 				<Layer zIndex="1">
 					<img style={{
 						position: "fixed",
@@ -40,16 +41,41 @@ const Main = React.createClass({
 						</div>
 						</div>
 					</Component>
-					<Component background="white">
-						here is the main section
+
+					<Component background="white" padding="7.5em">
+						<div style={{
+							margin: "auto",
+							fontSize: "1.5em",
+						}}>
+							Second Section Header
+						</div>
+						<div style={{
+							margin: "auto",
+							padding: "1.5em"
+						}}>
+							<img style={{
+								maxWidth: "100%",
+							}}
+							src={require('../images/image2.jpg')} alt="background" />
+						</div>
+						<div style={{
+							margin: "auto",
+							padding: "7.5em"
+						}}>
+							here is the footer
+						</div>
+
 					</Component>
-					<Component background="white">
-						here is the footer
-					</Component>
+
+					{/*<Component background="white" padding="7.5em">
+
+					</Component>*/}
+
 				</Layer>
 
 				<Layer zIndex="3">
 					<div style={{
+						height: "2.75em",
 						textAlign: "center",
 						position: "fixed",
 						width: "100%",
