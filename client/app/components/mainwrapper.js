@@ -104,9 +104,36 @@ const Main = React.createClass({
 
 						<div style={{
 							margin: "auto",
-							padding: "60px"
+							padding: "8.5em"
 						}}>
-							here is the footer
+							<div style={{
+								margin: "auto",
+								textTransform: "uppercase",
+								textAlign: "center",
+								fontWeight: "bold",
+								fontSize: "1.2em",
+								padding: "2px"
+							}}>Footer Title</div>
+							<div style={{
+								textAlign: "center",
+								fontSize: "0.85em",
+								padding: "2px"
+							}}>Footer Link 1</div>
+							<div style={{
+								textAlign: "center",
+								fontSize: "0.85em",
+								padding: "2px"
+							}}>Footer Link 2</div>
+							<div style={{
+								textAlign: "center",
+								fontSize: "0.85em",
+								padding: "2px"
+							}}>Footer Link 3</div>
+							<div style={{
+								textAlign: "center",
+								fontSize: "0.85em",
+								padding: "2px"
+							}}>Footer Link 4</div>
 						</div>
 
 					</Component>
