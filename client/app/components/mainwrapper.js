@@ -23,6 +23,8 @@ const Main = React.createClass({
 	render () {
 		return (
 			<div>
+
+
 				<Layer zIndex="1">
 					<img style={{
 						position: "fixed",
@@ -33,12 +35,12 @@ const Main = React.createClass({
 					src={require('../images/image1.jpg')} alt="background" />
 				</Layer>
 
+
 				<Layer zIndex="2">
 					<Component resize>
 						<div style={{
 							marginTop: "175px",
 							marginLeft: "auto",
-							//background: "black",
 							color: "white"
 						}}>
 							<div style={{fontSize: "3em", textTransform: "uppercase"}}>
@@ -82,10 +84,34 @@ const Main = React.createClass({
 								}}>our products</button>
 							</div>
 						</div>
-
 					</Component>
 
 					<Component background="white" padding="7.5em">
+
+						<svg 
+							style={{
+								position: "absolute",
+								top: "975px",
+								left: "955px"
+							}}
+							xmlns="http://www.w3.org/2000/svg"
+							width="1.736in" height="4.181in">
+						<path fill-rule="evenodd"  stroke="rgb(0, 43, 73)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" 				fill="none"
+							d="M1.537,2.188 L2.463,1.812 L122.463,297.812 L121.537,298.188 L1.537,2.188 Z"/>
+						</svg>
+
+						<svg
+							style={{
+								position: "absolute",
+								top: "1135px",
+								left: "200px"
+							}} 
+							xmlns="http://www.w3.org/2000/svg"
+							width="1.736in" height="4.181in">
+						<path fill-rule="evenodd"  stroke="rgb(0, 43, 73)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" 				fill="none"
+							d="M1.537,2.188 L2.463,1.812 L122.463,297.812 L121.537,298.188 L1.537,2.188 Z"/>
+						</svg>
+						
 						<div style={{
 							margin: "auto",
 							fontSize: "1.85em",
@@ -135,41 +161,26 @@ const Main = React.createClass({
 								padding: "2px"
 							}}>Footer Link 4</div>
 						</div>
-
 					</Component>
-
 				</Layer>
+
 
 				<NavBar />
 
-				{/*<Layer zIndex="3">
-					<div style={{
-						display: "flex",
-						height: "50px",
-						position: "fixed",
-						//bottom: window.innerHeight - 50, //make component, add window scroll listener and resize listener
-						bottom: 0,
-						width: "100%",
-						background: "white",
-						fontSize: "1.85em",
-						textTransform: "uppercase",
-					}}>
-						<div style={{
-							margin: "auto",
-							paddingLeft: "2em",
-							flex: 1
-							}}>
-							abc creations
-						</div> 
-						<div style={{
-							margin: "auto",
-							paddingRight: "2em",
-							}}>
-							<svg fill="#000000" height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
-    						<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-							</svg>
-						</div>
-					</div>
+
+				{/*<Layer zIndex="5">
+					<svg 
+ 						xmlns="http://www.w3.org/2000/svg"
+ 						width="1.736in" height="4.181in">
+					<path fill-rule="evenodd"  stroke="rgb(0, 43, 73)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+					d="M1.537,2.188 L2.463,1.812 L122.463,297.812 L121.537,298.188 L1.537,2.188 Z"/>
+					</svg>
+					<svg 
+						xmlns="http://www.w3.org/2000/svg"
+						width="1.736in" height="4.181in">
+					<path fill-rule="evenodd"  stroke="rgb(0, 43, 73)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+					d="M1.537,2.188 L2.463,1.812 L122.463,297.812 L121.537,298.188 L1.537,2.188 Z"/>
+					</svg>
 				</Layer>*/}
 			
 			</div>

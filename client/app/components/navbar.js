@@ -28,7 +28,6 @@ const NavBar = React.createClass({
           display: "flex",
           height: "50px",
           position: "fixed",
-          //bottom: window.innerHeight - 50, //make component, add window scroll listener and resize listener
           bottom: this.state.bottom,
           width: "100%",
           background: "white",
