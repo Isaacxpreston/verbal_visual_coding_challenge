@@ -10,6 +10,9 @@ const NavBar = React.createClass({
     }
 		this.setState({
 			bottom: window.innerHeight - 50
+      //this needs to be set to top, and relative to background image size.
+      //then triggered when window reaches it
+      //not immediately visible at botom
 		})
 	},
 

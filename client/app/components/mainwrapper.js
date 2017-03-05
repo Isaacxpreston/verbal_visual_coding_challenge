@@ -13,6 +13,9 @@ const Main = React.createClass({
 	//todo
 		//scroll speed on layers
 
+		//add arrow
+		//add box shadow
+
 		//snap to sections like on verbal visual website
 
 		//mediaquery main header at 650px
@@ -23,7 +26,6 @@ const Main = React.createClass({
 	render () {
 		return (
 			<div>
-
 
 				<Layer zIndex="1">
 					<img style={{
@@ -84,33 +86,19 @@ const Main = React.createClass({
 								}}>our products</button>
 							</div>
 						</div>
+						<div style={{
+							margin: "auto",
+						}}>
+							<svg 
+								xmlns="http://www.w3.org/2000/svg"
+								width="0.125in" height="0.653in">
+								<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+								d="M4.496,46.992 L8.986,36.151 L6.054,37.363 C6.054,22.040 6.054,16.753 6.054,1.433 C6.054,-0.509 2.946,-0.509 2.946,1.433 C2.946,16.751 2.946,22.037 2.946,37.357 L0.014,36.128 L4.496,46.992 Z"/>
+							</svg>
+						</div>
 					</Component>
 
 					<Component background="white" padding="7.5em">
-
-						<svg 
-							style={{
-								position: "absolute",
-								top: "975px",
-								left: "955px"
-							}}
-							xmlns="http://www.w3.org/2000/svg"
-							width="1.736in" height="4.181in">
-						<path fill-rule="evenodd"  stroke="rgb(0, 43, 73)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" 				fill="none"
-							d="M1.537,2.188 L2.463,1.812 L122.463,297.812 L121.537,298.188 L1.537,2.188 Z"/>
-						</svg>
-
-						<svg
-							style={{
-								position: "absolute",
-								top: "1135px",
-								left: "200px"
-							}} 
-							xmlns="http://www.w3.org/2000/svg"
-							width="1.736in" height="4.181in">
-						<path fill-rule="evenodd"  stroke="rgb(0, 43, 73)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" 				fill="none"
-							d="M1.537,2.188 L2.463,1.812 L122.463,297.812 L121.537,298.188 L1.537,2.188 Z"/>
-						</svg>
 						
 						<div style={{
 							margin: "auto",
@@ -164,24 +152,22 @@ const Main = React.createClass({
 					</Component>
 				</Layer>
 
+				<Layer zIndex="3">
+					<Component resize />
+					<Component padding="8.5em">
+						<div style={{
+							margin: "auto",
+							padding: "30px"
+						}}>
+						<img style={{
+							maxWidth: "100%"
+						}} src={require('../images/lines.png')} />
+						</div>
+					</Component>
+				</Layer>
+
 
 				<NavBar />
-
-
-				{/*<Layer zIndex="5">
-					<svg 
- 						xmlns="http://www.w3.org/2000/svg"
- 						width="1.736in" height="4.181in">
-					<path fill-rule="evenodd"  stroke="rgb(0, 43, 73)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
-					d="M1.537,2.188 L2.463,1.812 L122.463,297.812 L121.537,298.188 L1.537,2.188 Z"/>
-					</svg>
-					<svg 
-						xmlns="http://www.w3.org/2000/svg"
-						width="1.736in" height="4.181in">
-					<path fill-rule="evenodd"  stroke="rgb(0, 43, 73)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
-					d="M1.537,2.188 L2.463,1.812 L122.463,297.812 L121.537,298.188 L1.537,2.188 Z"/>
-					</svg>
-				</Layer>*/}
 			
 			</div>
 		)
