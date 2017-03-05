@@ -34,25 +34,48 @@ const Main = React.createClass({
 							marginTop: "auto",
 							marginBottom: "auto",
 							marginLeft: "auto",
-							width: "40%",
-							background: "maroon",
+							background: "black",
+							color: "white"
 						}}>
-							<div>
-								from factory
+							<div style={{fontSize: "3em", textTransform: "uppercase"}}>
+								from <span style={{fontWeight: "bold"}}> factory </span>
+							</div>
+							<div style={{fontSize: "3em", marginTop: "-5px", textTransform: "uppercase"}}>
+								to <span style={{fontWeight: "bold"}}> store </span>
+							</div>
+							<div style={{fontSize: "3em", marginTop: "-5px", textTransform: "uppercase"}}>
+								to <span style={{fontWeight: "bold"}}> out the door. </span>
+							</div>
+							<div style={{fontSize: "0.85em", marginTop: "15px", marginBottom: "5px"}}>
+								ABC Creations offers
+								<span style={{fontWeight: "bold"}}> international end-to-end apparel</span>
+							</div>
+							<div style={{fontSize: "0.85em", marginBottom: "20px"}}>
+								manufacturing solutions for forward thinking clothing brands.
 							</div>
 							<div>
-								to store
-							</div>
-							<div>
-								to out the door.
-							</div>
-							<div>
-								abc creations offers end-to-end apparel
-								manufacturing solutions for forward thinking clothing brands
-							</div>
-							<div>
-								<button>our process</button>
-								<button>our products</button>
+								<button style={{
+									border: "2px solid white",
+									fontSize: "0.85em",
+									fontWeight: "bold",
+									background: 'none',
+									marginRight: "12.5px",
+									textTransform: "uppercase",
+									color: "white",
+									width: "183px",
+									height: "46px"
+								}}>our process</button>
+								<button style={{
+									border: "2px solid white",
+									fontSize: "0.85em",
+									fontWeight: "bold",
+									background: 'none',
+									marginRight: "15px",
+									textTransform: "uppercase",
+									color: "white",
+									width: "183px",
+									height: "46px"
+								}}>our products</button>
 							</div>
 						</div>
 
@@ -67,7 +90,7 @@ const Main = React.createClass({
 						</div>
 						<div style={{
 							margin: "auto",
-							padding: "1.5em"
+							padding: "30px"
 						}}>
 							<img style={{
 								maxWidth: "100%",
@@ -76,7 +99,7 @@ const Main = React.createClass({
 						</div>
 						<div style={{
 							margin: "auto",
-							padding: "7.5em"
+							padding: "60px"
 						}}>
 							here is the footer
 						</div>
@@ -86,14 +109,27 @@ const Main = React.createClass({
 
 				<Layer zIndex="3">
 					<div style={{
+						display: "flex",
+						justifyContent: "space-between",
 						height: "40px",
 						textAlign: "center",
 						position: "fixed",
-						bottom: window.innerHeight - 40, //yeaaauuhh
+						bottom: window.innerHeight - 40, //make component, add window scroll listener
 						width: "100%",
-						background: "navy"
+						background: "white"
 					}}>
-						here is the nav bar 
+						<div style={{
+							background: "grey",
+							marginLeft: "2em"
+							}}>
+							abc creations
+						</div> 
+						<div style={{
+							background: "grey",
+							marginRight: "2em"
+							}}>
+							menu
+						</div>
 					</div>
 				</Layer>
 			
