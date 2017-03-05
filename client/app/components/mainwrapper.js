@@ -43,22 +43,21 @@ const Main = React.createClass({
 						<div style={{
 							marginTop: "175px",
 							marginLeft: "auto",
-							color: "white"
 						}}>
-							<div style={{fontSize: "3em", textTransform: "uppercase"}}>
-								from <span style={{fontWeight: "bold"}}> factory </span>
+							<div style={{fontSize: "3em", textTransform: "uppercase", color: "white"}}>
+								from <span style={{fontWeight: "bold", color: "white"}}> factory </span>
 							</div>
-							<div style={{fontSize: "3em", marginTop: "-5px", textTransform: "uppercase"}}>
-								to <span style={{fontWeight: "bold"}}> store </span>
+							<div style={{fontSize: "3em", marginTop: "-5px", textTransform: "uppercase", color: "white"}}>
+								to <span style={{fontWeight: "bold", color: "white"}}> store </span>
 							</div>
-							<div style={{fontSize: "3em", marginTop: "-5px", textTransform: "uppercase"}}>
-								to <span style={{fontWeight: "bold"}}> out the door. </span>
+							<div style={{fontSize: "3em", marginTop: "-5px", textTransform: "uppercase", color: "white"}}>
+								to <span style={{fontWeight: "bold", color: "white"}}> out the door. </span>
 							</div>
-							<div style={{fontSize: "0.85em", marginTop: "15px", marginBottom: "5px"}}>
+							<div style={{fontSize: "0.85em", marginTop: "15px", marginBottom: "5px", color: "white"}}>
 								ABC Creations offers
-								<span style={{fontWeight: "bold"}}> international end-to-end apparel</span>
+								<span style={{fontWeight: "bold", color: "white"}}> international end-to-end apparel</span>
 							</div>
-							<div style={{fontSize: "0.85em", marginBottom: "20px"}}>
+							<div style={{fontSize: "0.85em", marginBottom: "20px", color: "white"}}>
 								manufacturing solutions for forward thinking clothing brands.
 							</div>
 							<div>
@@ -100,26 +99,28 @@ const Main = React.createClass({
 
 					<Component background="white" padding="7.5em">
 						
-						{/*<div style={{
+						<div style={{
 							margin: "auto",
+							paddingBottom: "1.25em",
 							fontSize: "1.85em",
 						}}>
 							Second Section Header
-						</div>*/}
+						</div>
+
 						<div style={{
 							margin: "auto",
-						//	padding: "30px"
 						}}>
 							<img style={{
-								maxWidth: "100%",
+								maxWidth: "1050px",
 							}}
 							src={require('../images/image2.jpg')} alt="background" />
 						</div>
 
 						<div style={{
 							margin: "auto",
-							padding: "8.5em"
-						}}>
+							paddingTop: "8.5em",
+							paddingBottom: "8.5em"
+						}}>	
 							<div style={{
 								margin: "auto",
 								textTransform: "uppercase",
@@ -154,14 +155,13 @@ const Main = React.createClass({
 
 				<Layer zIndex="3">
 					<Component resize />
-					<Component padding="6.5em">
+					<Component>
 						<div style={{
-							//top needs to be responsive...
+							paddingTop: "10.5em", //keep
 							margin: "auto",
-						//	padding: "30px"
 						}}>
 						<img style={{
-							maxWidth: "100%"
+							maxWidth: "1050px" //todo - create media queries for this
 						}} src={require('../images/lines.png')} />
 						</div>
 					</Component>
