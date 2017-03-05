@@ -6,16 +6,21 @@ import '../fonts/open_sans.css'
 
 import Component from './component'
 import Layer from './layer'
+import NavBar from './navbar'
 
 const Main = React.createClass({
 
 	//todo
 		//scroll speed on layers
 
+		//snap to sections like on verbal visual website
+
+		//mediaquery main header at 650px
+
 		//set navbar top position right below background image dimensions
 		//change immediately on scroll
 
-	render() {
+	render () {
 		return (
 			<div>
 				<Layer zIndex="1">
@@ -31,10 +36,9 @@ const Main = React.createClass({
 				<Layer zIndex="2">
 					<Component resize>
 						<div style={{
-							marginTop: "auto",
-							marginBottom: "auto",
+							marginTop: "175px",
 							marginLeft: "auto",
-							background: "black",
+							//background: "black",
 							color: "white"
 						}}>
 							<div style={{fontSize: "3em", textTransform: "uppercase"}}>
@@ -84,7 +88,7 @@ const Main = React.createClass({
 					<Component background="white" padding="7.5em">
 						<div style={{
 							margin: "auto",
-							fontSize: "1.5em",
+							fontSize: "1.85em",
 						}}>
 							Second Section Header
 						</div>
@@ -97,41 +101,49 @@ const Main = React.createClass({
 							}}
 							src={require('../images/image2.jpg')} alt="background" />
 						</div>
+
 						<div style={{
 							margin: "auto",
 							padding: "60px"
 						}}>
 							here is the footer
 						</div>
+
 					</Component>
 
 				</Layer>
 
-				<Layer zIndex="3">
+				<NavBar />
+
+				{/*<Layer zIndex="3">
 					<div style={{
 						display: "flex",
-						justifyContent: "space-between",
-						height: "40px",
-						textAlign: "center",
+						height: "50px",
 						position: "fixed",
-						bottom: window.innerHeight - 40, //make component, add window scroll listener
+						//bottom: window.innerHeight - 50, //make component, add window scroll listener and resize listener
+						bottom: 0,
 						width: "100%",
-						background: "white"
+						background: "white",
+						fontSize: "1.85em",
+						textTransform: "uppercase",
 					}}>
 						<div style={{
-							background: "grey",
-							marginLeft: "2em"
+							margin: "auto",
+							paddingLeft: "2em",
+							flex: 1
 							}}>
 							abc creations
 						</div> 
 						<div style={{
-							background: "grey",
-							marginRight: "2em"
+							margin: "auto",
+							paddingRight: "2em",
 							}}>
-							menu
+							<svg fill="#000000" height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
+    						<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+							</svg>
 						</div>
 					</div>
-				</Layer>
+				</Layer>*/}
 			
 			</div>
 		)
