@@ -100,15 +100,15 @@ const Main = React.createClass({
 
 					<Component background="white" padding="7.5em">
 						
-						<div style={{
+						{/*<div style={{
 							margin: "auto",
 							fontSize: "1.85em",
 						}}>
 							Second Section Header
-						</div>
+						</div>*/}
 						<div style={{
 							margin: "auto",
-							padding: "30px"
+						//	padding: "30px"
 						}}>
 							<img style={{
 								maxWidth: "100%",
@@ -154,10 +154,11 @@ const Main = React.createClass({
 
 				<Layer zIndex="3">
 					<Component resize />
-					<Component padding="8.5em">
+					<Component padding="6.5em">
 						<div style={{
+							//top needs to be responsive...
 							margin: "auto",
-							padding: "30px"
+						//	padding: "30px"
 						}}>
 						<img style={{
 							maxWidth: "100%"
