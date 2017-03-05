@@ -157,7 +157,7 @@ const Main = React.createClass({
 					<Component resize />
 					<Component>
 						<div style={{
-							paddingTop: "10.5em", //keep
+							paddingTop: "10.65em", //keep
 							margin: "auto",
 						}}>
 						<img style={{
