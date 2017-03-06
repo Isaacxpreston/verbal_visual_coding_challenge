@@ -13,6 +13,8 @@ import MainSplash from './splash'
 
 const Main = React.createClass({
 
+	//just have two or three set dimensions for background
+
 	//todo
 		//scroll speed on layers
 
@@ -35,8 +37,8 @@ const Main = React.createClass({
 
 				<Layer zIndex="2">
 					<MainSplash />
-
-					{/*<Component background="white" padding="7.5em">
+					
+					<Component background="white" padding="7.5em">
 						<div style={{
 							margin: "auto",
 							paddingBottom: "1.25em",
@@ -55,13 +57,14 @@ const Main = React.createClass({
 						</div>
 
 						<Footer />
-					</Component>*/}
+					</Component>
 				</Layer>
 
-				{/*<Layer zIndex="3">
+				<Layer zIndex="3">
 					<Component resize />
 					<Component>
 						<div style={{
+							//move to same div as other image
 							paddingTop: "10.65em", //keep
 							margin: "auto",
 						}}>
@@ -73,7 +76,7 @@ const Main = React.createClass({
 				</Layer>
 
 
-				<NavBar />*/}
+				{/*<NavBar />*/}
 			
 			</div>
 		)

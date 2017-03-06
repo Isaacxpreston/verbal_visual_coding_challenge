@@ -27,14 +27,16 @@ const Background = React.createClass({
           width: "100%",
           height: window.innerHeight //(765/1200) * window.innerWidth //ugh
         }}>
-        ""
         </div>
         <img style={{
           zIndex: "2",
           position: "fixed",
           top: 0,
           left: 0,
-          width: "100%"
+          width: "100%",
+          '@media (max-width: 1200px)': {
+            width: 1200,
+          }
         }}
         src={require('../images/image1.jpg')} alt="background" />
       </Layer>
