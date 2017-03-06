@@ -11,25 +11,17 @@ const NavBar = React.createClass({
     }
 		this.setState({
       top: 0
-      //this needs to be set to top, and relative to background image size.
-      //then triggered when window reaches it
-      //not immediately visible at botom
 		})
 	},
 
 	componentWillMount () {
     this.setState({
-      top: (765/1200) * window.innerWidth
-      //put this in redux, now in multiple places
-      //then no longer need multiple listeners and handlers
-      //just add a global listener for resize and update store  
+      top: window.innerHeight
     })
 
-    // window.addEventListener("scroll", this.scroll)
+    window.addEventListener("scroll", this.scroll)
     //animation forwards from absolute to fixed
     //needs resize listeners in case resized and not scrolled, then scrolled.
-    //possibly relative padding and other things too based on window height.
-      //or percentages.
 	},
 
 	render() {

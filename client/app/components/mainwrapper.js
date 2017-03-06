@@ -38,7 +38,7 @@ const Main = React.createClass({
 				<Layer zIndex="2">
 					<MainSplash />
 					
-					<Component background="white" padding="7.5em">
+					<Component id="content" background="white" padding="7.5em">
 						<div style={{
 							margin: "auto",
 							paddingBottom: "1.25em",
@@ -51,8 +51,10 @@ const Main = React.createClass({
 							position: "relative",
 							margin: "auto",
 							width: "100%",
-							height: "459",
+							height: "459px",
+							//change height on resize too
 						//	background: "orange"
+						//media query component margins around 1120px
 						}}>
 							<img src={require('../images/lines.png')} style= {{
 								zIndex: 2,
@@ -83,30 +85,15 @@ const Main = React.createClass({
 						<Footer />
 					</Component>
 				</Layer>
-
-				{/*<Layer zIndex="3">
-					<Component resize />
-					<Component>
-						<div style={{
-							//move to same div as other image
-							paddingTop: "10.65em", //keep
-							margin: "auto",
-						}}>
-						<img style={{
-							maxWidth: "1050px" //todo - create media queries for this
-						}} src={require('../images/lines.png')} />
-						</div>
-					</Component>
-				</Layer>*/}
-
-
-				{/*<NavBar />*/}
+				
+				<NavBar />
 			
 			</div>
 		)
 	}
 })
 
+//remove me
 function mapStatetoProps (state=null) {
 	return {
 		simpleReducer: state.simpleReducer,

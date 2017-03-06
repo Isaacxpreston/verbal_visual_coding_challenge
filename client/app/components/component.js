@@ -31,7 +31,7 @@ const Component = React.createClass({
 
 	render() {
 		return (
-			<div style={{
+			<div id={this.props.id} style={{
 				height: this.state.height,
 				background: this.props.background,
 				padding: this.props.padding,

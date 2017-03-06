@@ -23,7 +23,7 @@ const Background = React.createClass({
           zIndex: "4",
           background: "rgba(0, 0, 0, 0.5)",
           width: "100%",
-          height: window.innerHeight
+          height: "100%" //window.innerHeight
         }}></div>
         <div style={{
           position: "fixed",
@@ -32,7 +32,7 @@ const Background = React.createClass({
           zIndex: "3",
           background: "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0, 0, 128, 0.85) 100%)",
           width: "100%",
-          height: window.innerHeight //(765/1200) * window.innerWidth //ugh
+          height: "100%" //window.innerHeight //(765/1200) * window.innerWidth //ugh
         }}>
         </div>
         <img style={{

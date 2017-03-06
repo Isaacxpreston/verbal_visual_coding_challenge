@@ -75,6 +75,10 @@ const MainSplash = React.createClass({
 
         <div style={{
           margin: "auto",
+        }}
+        onClick={() =>{
+          var y = document.getElementById("content").getBoundingClientRect().top + window.scrollY
+          window.scrollTo(0, y)  //do this on scroll too. 
         }}>
           <svg 
             xmlns="http://www.w3.org/2000/svg"
