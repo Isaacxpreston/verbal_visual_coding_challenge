@@ -1,15 +1,16 @@
 import React from 'react'
 import styles from '../styles/component_styles'
+import Radium from 'radium'
 
 import Layer from './layer'
 
 const NavBar = React.createClass({
 	scroll () {
-    if(this.state.bottom >= window.innerHeight - 50) {
+    if(this.top === 0) {
       return
     }
 		this.setState({
-			bottom: window.innerHeight - 50
+      top: 0
       //this needs to be set to top, and relative to background image size.
       //then triggered when window reaches it
       //not immediately visible at botom
@@ -18,10 +19,17 @@ const NavBar = React.createClass({
 
 	componentWillMount () {
     this.setState({
-      bottom: 0
+      top: (765/1200) * window.innerWidth
+      //put this in redux, now in multiple places
+      //then no longer need multiple listeners and handlers
+      //just add a global listener for resize and update store  
     })
 
-    window.addEventListener("scroll", this.scroll)
+    // window.addEventListener("scroll", this.scroll)
+    //animation forwards from absolute to fixed
+    //needs resize listeners in case resized and not scrolled, then scrolled.
+    //possibly relative padding and other things too based on window height.
+      //or percentages.
 	},
 
 	render() {
@@ -30,8 +38,8 @@ const NavBar = React.createClass({
         <div style={{
           display: "flex",
           height: "50px",
-          position: "fixed",
-          bottom: this.state.bottom,
+          position: "absolute",
+          top: this.state.top,
           width: "100%",
           background: "white",
           fontSize: "1.85em",
@@ -58,5 +66,5 @@ const NavBar = React.createClass({
 	}
 })
 
-export default NavBar	
+export default Radium(NavBar)
   

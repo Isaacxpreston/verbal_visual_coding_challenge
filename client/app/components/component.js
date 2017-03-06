@@ -5,11 +5,6 @@ const Component = React.createClass({
 	resize () {
 		this.setState({
 			height: (765/1200) * window.innerWidth //make this a seperate spacer component?
-			//height of background should always be window inner height
-			//might make calculating things easier that way too.
-
-			//an even easier way to do this is have fixed properties, and three media queries.
-			//honestly yeah.
 		})
 	},
 
