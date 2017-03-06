@@ -2,6 +2,7 @@ import React from 'react'
 import Radium from 'radium'
 
 import Component from './component'
+import Arrow from './arrow'
 
 const styles = {
   splash: {
@@ -46,9 +47,10 @@ const styles = {
     color: "white"
   }
 }
+
 const MainSplash = React.createClass({
   render () {
-    return (
+    return ( //this always needs to have 50px padding or margin on top for navbar to live
       <Component resize>
         <div style={styles.splash}>
           <div style={styles.header}>
@@ -73,20 +75,7 @@ const MainSplash = React.createClass({
           </div>
         </div>
 
-        <div style={{
-          margin: "auto",
-        }}
-        onClick={() =>{
-          var y = document.getElementById("content").getBoundingClientRect().top + window.scrollY
-          window.scrollTo(0, y)  //do this on scroll too. 
-        }}>
-          <svg 
-            xmlns="http://www.w3.org/2000/svg"
-            width="0.125in" height="0.653in">
-            <path fillRule="evenodd"  fill="rgb(255, 255, 255)"
-            d="M4.496,46.992 L8.986,36.151 L6.054,37.363 C6.054,22.040 6.054,16.753 6.054,1.433 C6.054,-0.509 2.946,-0.509 2.946,1.433 C2.946,16.751 2.946,22.037 2.946,37.357 L0.014,36.128 L4.496,46.992 Z"/>
-          </svg>
-        </div>
+        <Arrow />
         
       </Component>
     )
