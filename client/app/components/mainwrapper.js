@@ -48,19 +48,43 @@ const Main = React.createClass({
 						</div>
 
 						<div style={{
+							position: "relative",
 							margin: "auto",
+							width: "100%",
+							height: "459",
+						//	background: "orange"
 						}}>
-							<img style={{
-								maxWidth: "1050px",
-							}}
-							src={require('../images/image2.jpg')} alt="background" />
+							<img src={require('../images/lines.png')} style= {{
+								zIndex: 2,
+								position: "absolute",
+								margin: "auto",
+								maxWidth: "100%",
+								top: 0,
+								left: 0,
+								bottom: 0,
+								right: 0,
+							}} />
+							<img src={require('../images/image2.jpg')} style={{
+								zIndex: 1,
+								position: "absolute",
+								margin: "auto",
+								maxWidth: "100%",
+								top: 0,
+								left: 0,
+								bottom: 0,
+								right: 0,
+							}} />
 						</div>
 
+						
+					</Component>
+
+					<Component background="grey">
 						<Footer />
 					</Component>
 				</Layer>
 
-				<Layer zIndex="3">
+				{/*<Layer zIndex="3">
 					<Component resize />
 					<Component>
 						<div style={{
@@ -73,7 +97,7 @@ const Main = React.createClass({
 						}} src={require('../images/lines.png')} />
 						</div>
 					</Component>
-				</Layer>
+				</Layer>*/}
 
 
 				{/*<NavBar />*/}

@@ -4,6 +4,13 @@ import Radium from 'radium'
 
 import Layer from './layer'
 
+//if window height > image natural height
+  //set height to 100
+  //width to auto?
+
+//if window width > image natural width
+  //set width to 100%
+
 const Background = React.createClass({
 
 	render() {

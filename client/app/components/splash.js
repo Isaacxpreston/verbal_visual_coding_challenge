@@ -23,10 +23,10 @@ const styles = {
     width: "183px",
     height: "46px",
     '@media (max-width: 450px)': {
-      width: 183/2,
-      height: 46/2,
-      fontSize: "0.425em",
-      marginRight: 12.5/2
+      width: 183/1.5,
+      height: 46/1.5,
+      fontSize: 0.85/1.5 + "em",
+      marginRight: 12.5/1.5
     }
   },
   header: {
@@ -39,10 +39,7 @@ const styles = {
   },
   subheader: {
     fontSize: "0.85em",
-    color: "white",
-    '@media (max-width: 450px)': {
-      marginBottom: "5px"
-    }
+    color: "white"
   },
   boldface: {
     fontWeight: "bold",
