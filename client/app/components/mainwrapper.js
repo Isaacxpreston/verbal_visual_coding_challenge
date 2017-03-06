@@ -31,14 +31,12 @@ const Main = React.createClass({
 	render () {
 		return (
 			<div>
-
 				<Background />
 
 				<Layer zIndex="2">
 					<MainSplash />
 
-					<Component background="white" padding="7.5em">
-						
+					{/*<Component background="white" padding="7.5em">
 						<div style={{
 							margin: "auto",
 							paddingBottom: "1.25em",
@@ -57,10 +55,10 @@ const Main = React.createClass({
 						</div>
 
 						<Footer />
-					</Component>
+					</Component>*/}
 				</Layer>
 
-				<Layer zIndex="3">
+				{/*<Layer zIndex="3">
 					<Component resize />
 					<Component>
 						<div style={{
@@ -75,7 +73,7 @@ const Main = React.createClass({
 				</Layer>
 
 
-				<NavBar />
+				<NavBar />*/}
 			
 			</div>
 		)

@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from '../styles/component_styles'
 
+import Radium from 'radium'
+
 const Component = React.createClass({
 	resize () {
 		this.setState({
@@ -34,4 +36,6 @@ const Component = React.createClass({
 	}
 })
 
-export default Component
+export default Radium(Component)
+
+//an iphone 5s is 340 wide
