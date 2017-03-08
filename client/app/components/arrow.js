@@ -3,14 +3,12 @@ import React from 'react'
 const Arrow = React.createClass({
 
   updateScroll () {
-    console.log((window.innerHeight - window.scrollY) / window.innerHeight)
     this.setState({
       scroll: (window.innerHeight - (window.scrollY * 1.5)) / window.innerHeight
     })
   },
 
   componentWillMount () {
-    console.log(window)
     this.setState({
       scroll: (window.innerHeight - (window.scrollY * 1.5)) / window.innerHeight
     })
@@ -25,10 +23,7 @@ const Arrow = React.createClass({
         opacity: this.state.scroll
       }}
       onClick={() =>{
-        var y = document.getElementById("content").getBoundingClientRect().top + window.scrollY
-        window.scrollTo(0, y)  //do this on scroll too.
-        //fade out arrow on scroll and on click
-        //basically, the lower you are on the page, the less visible the arrow should be. 
+        window.scrollTo(0, window.innerHeight) 
       }}>
         <svg 
           xmlns="http://www.w3.org/2000/svg"

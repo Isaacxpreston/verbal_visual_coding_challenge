@@ -5,23 +5,40 @@ import Radium from 'radium'
 import Layer from './layer'
 
 const NavBar = React.createClass({
-	scroll () {
-    if(this.top === 0) {
-      return
+  resize () {
+    if(this.state.position === "absolute") {
+      this.setState({
+        top: window.innerHeight
+      })
+    } else {
+      this.setState({
+        top: 0
+      })
     }
-		this.setState({
-      top: 0
-		})
+	},
+
+	scroll () {
+    if(window.scrollY >= window.innerHeight) {
+      this.setState({
+        position: "fixed",
+        top: 0
+      })
+    } else {
+      this.setState({
+        position: "absolute",
+        top: window.innerHeight
+      })
+    }
 	},
 
 	componentWillMount () {
     this.setState({
-      top: window.innerHeight
+      top: window.innerHeight,
+      position: "absolute",
+      scrolling: false
     })
-
+    window.addEventListener("resize", this.resize)
     window.addEventListener("scroll", this.scroll)
-    //animation forwards from absolute to fixed
-    //needs resize listeners in case resized and not scrolled, then scrolled.
 	},
 
 	render() {
@@ -30,7 +47,7 @@ const NavBar = React.createClass({
         <div style={{
           display: "flex",
           height: "50px",
-          position: "absolute",
+          position: this.state.position,
           top: this.state.top,
           width: "100%",
           background: "white",
@@ -48,7 +65,7 @@ const NavBar = React.createClass({
             margin: "auto",
             paddingRight: "2em",
             }}>
-            <svg fill="#103b58" height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
+            <svg fill="#103b58" height="36" viewBox="0 0 24 24" width="36">
               <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
             </svg>
           </div>

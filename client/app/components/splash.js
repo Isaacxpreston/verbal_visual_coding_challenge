@@ -3,33 +3,27 @@ import Radium from 'radium'
 
 import Component from './component'
 import Arrow from './arrow'
+import Button from './button'
 
 const styles = {
+  
   splash: {
-    marginTop: "auto",
+    marginTop: "10em",
     marginBottom: "auto",
     marginLeft: "auto",
     '@media (max-width: 800px)': {
       margin: "auto"
     }
   },
-  button: {
-    border: "2px solid white",
-    fontSize: "0.85em",
-    fontWeight: "bold",
-    background: 'none',
-    marginRight: "12.5px",
-    textTransform: "uppercase",
-    color: "white",
-    width: "183px",
-    height: "46px",
-    '@media (max-width: 450px)': {
-      width: 183/1.5,
-      height: 46/1.5,
-      fontSize: 0.85/1.5 + "em",
-      marginRight: 12.5/1.5
-    }
-  },
+
+  //  for button
+  //   '@media (max-width: 450px)': {
+  //     width: 183/1.5,
+  //     height: 46/1.5,
+  //     fontSize: 0.85/1.5 + "em",
+  //     marginRight: 12.5/1.5
+  //   }
+
   header: {
     fontSize: "3em",
     textTransform: "uppercase",
@@ -49,9 +43,24 @@ const styles = {
 }
 
 const MainSplash = React.createClass({
+
+  updateScroll () {
+    this.setState({
+      scroll: (window.innerHeight - (window.scrollY * 1.5)) / window.innerHeight
+    })
+  },
+
+  componentWillMount () {
+    this.setState({
+      scroll: (window.innerHeight - (window.scrollY * 1.5)) / window.innerHeight
+    })
+    
+    window.addEventListener('scroll', this.updateScroll)
+  },
+
   render () {
-    return ( //this always needs to have 50px padding or margin on top for navbar to live
-      <Component resize>
+    return (
+      <Component opacity={this.state.scroll} resize>
         <div style={styles.splash}>
           <div style={styles.header}>
             from <span style={styles.boldface}> factory </span>
@@ -70,8 +79,8 @@ const MainSplash = React.createClass({
             manufacturing solutions for forward thinking clothing brands.
           </div>
           <div>
-            <button style={styles.button}>our process</button>
-            <button style={styles.button}>our products</button>
+            <Button>our process</Button>
+            <Button>our products</Button>
           </div>
         </div>
 

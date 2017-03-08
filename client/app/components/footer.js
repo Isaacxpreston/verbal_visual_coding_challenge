@@ -1,7 +1,9 @@
 import React from 'react'
+import Component from './component'
 
 const Footer = () => {
   return (
+    <Component background="white">
     <div style={{
       margin: "auto",
       paddingTop: "8.5em",
@@ -36,6 +38,7 @@ const Footer = () => {
         padding: "2px"
       }}>Footer Link 4</div>
     </div>
+    </Component>
   )
 }
 
