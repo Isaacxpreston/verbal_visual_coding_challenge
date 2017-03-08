@@ -5,6 +5,7 @@ import Radium from 'radium'
 import Layer from './layer'
 
 const NavBar = React.createClass({
+  
   resize () {
     if(this.state.position === "absolute") {
       this.setState({
@@ -35,6 +36,7 @@ const NavBar = React.createClass({
     this.setState({
       top: window.innerHeight,
       position: "absolute"
+      //set fade in animation names and stuff too
     })
     window.addEventListener("resize", this.resize)
     window.addEventListener("scroll", this.scroll)
