@@ -34,8 +34,7 @@ const NavBar = React.createClass({
 	componentWillMount () {
     this.setState({
       top: window.innerHeight,
-      position: "absolute",
-      scrolling: false
+      position: "absolute"
     })
     window.addEventListener("resize", this.resize)
     window.addEventListener("scroll", this.scroll)

@@ -2,29 +2,34 @@ import React from 'react'
 
 const Arrow = React.createClass({
 
-  updateScroll () {
+  scroll () {
+      if(window.scrollY >= window.innerHeight) {
+        return
+      }
+      window.scrollTo(0, window.scrollY + 50)
+      requestAnimationFrame(this.scroll)
+  },
+
+  updateOpacity () {
     this.setState({
-      scroll: (window.innerHeight - (window.scrollY * 1.5)) / window.innerHeight
+      opacity: (window.innerHeight - (window.scrollY * 1.5)) / window.innerHeight
     })
   },
 
   componentWillMount () {
     this.setState({
-      scroll: (window.innerHeight - (window.scrollY * 1.5)) / window.innerHeight
+      opacity: (window.innerHeight - (window.scrollY * 1.5)) / window.innerHeight
     })
-    
-    window.addEventListener('scroll', this.updateScroll)
+    window.addEventListener('scroll', this.updateOpacity)
   },
 
   render () {
     return (
       <div style={{
         margin: "auto",
-        opacity: this.state.scroll
+        opacity: this.state.opacity
       }}
-      onClick={() =>{
-        window.scrollTo(0, window.innerHeight) 
-      }}>
+      onClick={this.scroll}>
         <svg 
           xmlns="http://www.w3.org/2000/svg"
           width="0.125in" height="0.653in">
