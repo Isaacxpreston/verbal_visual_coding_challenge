@@ -57,25 +57,25 @@
 
 const styles = {
   svg_inverted_mask: {
-    position: absolute,
+    position: "absolute",
     top: 0,
     left: 0
   },
 
   text_transparent: {
-    fill: transparent,
+    fill: "transparent",
   },
 
   clip_text: {
-    fontWeight: bold
+    fontWeight: "bold"
   },
 
   mask_shape: {
-    fill: white
+    fill: "white"
   },
 
   shape_fill: {
-    fill: white,
+    fill: "white",
     height: "100%",
     animation: "unfill 0.3s ease forwards"
   },
@@ -122,3 +122,5 @@ const styles = {
   position: "relative",
   }
 }
+
+export default styles

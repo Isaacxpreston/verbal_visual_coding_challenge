@@ -24,11 +24,10 @@ const Component = React.createClass({
 
 	render() {
 		return (
-			<div id={this.props.id} style={{
+			<div style={{
 				opacity: this.props.opacity,
 				height: this.state.height,
 				background: this.props.background,
-				padding: this.props.padding,
 				...styles.content
 			}}>
 				{this.props.children}

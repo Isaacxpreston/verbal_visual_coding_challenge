@@ -54,13 +54,21 @@ const SecondSection = React.createClass({
     return (
 			//media query component margins around 1120px
 			//fix padding for media queries
-			<Component id="content" background="white" padding="7.5em">
+			<div style={{
+				display: "flex",
+				flexDirection: "column",
+				background: "white",
+				paddingTop: "7.5em",
+				paddingLeft: "1em",
+				paddingRight: "1em",
+			}}>
 				<div style={{
 					margin: "auto",
 					paddingBottom: "1.25em",
 					fontSize: "1.85em",
 					'@media (max-width: 550px)': {
 						paddingBottom: 0,
+						fontSize: "1.5em"
 					}
 				}}>
 					Second Section Header
@@ -89,7 +97,7 @@ const SecondSection = React.createClass({
 						right: 0,
 					}} />
 				</div>
-			</Component>
+			</div>
     )
   }
 })

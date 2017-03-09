@@ -15,7 +15,6 @@ const bounce = Radium.keyframes({
 })
 
 const Arrow = React.createClass({
-
   scroll () {
     if(window.scrollY < window.innerHeight) {
       window.scrollTo(0, window.scrollY + 50)
@@ -42,7 +41,7 @@ const Arrow = React.createClass({
         margin: "auto",
         opacity: this.state.opacity,
         transition: "transform 0.3s",
-        animation: "x 1.25s linear infinite", //add delays in handler
+        animation: "x 1.25s linear infinite",
         ":hover": {
           animationName: bounce,
           transform: "scale(2, 1.75)"

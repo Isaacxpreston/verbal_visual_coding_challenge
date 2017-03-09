@@ -1,6 +1,4 @@
 import React from 'react'
-import {Link, browserHistory} from 'react-router'
-import {connect} from 'react-redux'
 
 import '../fonts/open_sans.css'
 
@@ -12,7 +10,7 @@ import Footer from './footer'
 import MainSplash from './splash'
 import SecondSection from './second_section'
 
-const Main = React.createClass({
+const MainWrapper = React.createClass({
 
 	//just have two or three set dimensions for background
 
@@ -52,13 +50,5 @@ const Main = React.createClass({
 	}
 })
 
-//remove me
-function mapStatetoProps (state=null) {
-	return {
-		simpleReducer: state.simpleReducer,
-	}
-}
 
-const MainWrapper = connect(mapStatetoProps)(Main);
-
-export default MainWrapper;
+export default MainWrapper

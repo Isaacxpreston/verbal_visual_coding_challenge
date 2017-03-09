@@ -26,7 +26,7 @@ const styles = {
     textTransform: "uppercase",
     color: "white",
     '@media (max-width: 450px)': { //also 330 width for banner and header fonts
-      fontSize: "1.5em"
+      fontSize: "2em"
     },
     '@media (max-height: 380px)': {
       fontSize: "1.5em"

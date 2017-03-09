@@ -6,6 +6,16 @@
   position: relative;
 }
 
+
+@media (max-width: 450px) {
+  #container {
+    transform: scale(0.66, 0.66);
+    margin-left: -32.5px;
+    margin-right: -17.5px;
+    margin-top: -10px
+  }
+}
+
 #container:hover > #original {
   animation: clip 0.3s ease forwards
 }
@@ -13,7 +23,6 @@
 #container:hover > #button > .svg-inverted-mask > .shape-fill {
   animation: fill 0.3s ease forwards
 }
-
 
 @keyframes clip {
   from {
@@ -65,10 +74,6 @@
   font-size: 0.85em;
   font-weight: bold;
   overflow: hidden
-}
-
-#clip-text {
-  font-weight: bold
 }
 
 .clip-text {

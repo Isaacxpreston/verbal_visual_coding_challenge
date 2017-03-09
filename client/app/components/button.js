@@ -14,7 +14,6 @@ const Button = React.createClass({
   render () {
     return (
       <div id="container">
-
         <div id="original">
           <div id="content">
             {this.props.children}
