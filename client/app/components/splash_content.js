@@ -5,10 +5,8 @@ import Button from './button'
 import {slide_in, slide_up, styles} from '../styles/splash_content_styles'
 
 const SplashContent = React.createClass({
-
   render () {
     return (
-
         <div style={styles.splash}>
           <div style={{...styles.header, animationDelay: "0.25s"}}>
             from <span style={styles.boldface}> factory </span>
@@ -31,8 +29,8 @@ const SplashContent = React.createClass({
             <Button>our products</Button>
           </div>
         </div>
-
     )
   }
 })
+
 export default Radium(SplashContent)

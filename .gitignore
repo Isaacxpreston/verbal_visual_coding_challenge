@@ -7,7 +7,6 @@ client/public
 /client/public
 # testing
 coverage
-/server/stormpath.yml
 
 # production
 build

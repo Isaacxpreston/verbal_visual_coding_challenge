@@ -2,7 +2,6 @@ import React from 'react'
 import Radium from 'radium'
 
 import Layer from './layer'
-
 import styles from '../styles/navbar_styles'
 
 const NavBar = React.createClass({
