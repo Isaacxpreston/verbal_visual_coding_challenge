@@ -4,8 +4,7 @@ import Radium from 'radium'
 import FooterLink from './footer_link'
 import styles from '../styles/footer_styles'
 
-const Footer = React.createClass( {
-  render () {
+const Footer = () => {
   return (
     <div style={styles.content}>
     <div style={styles.wrapper}>	
@@ -17,7 +16,6 @@ const Footer = React.createClass( {
     </div>
     </div>
   )
-  }
-} )
+}
 
 export default Radium(Footer)

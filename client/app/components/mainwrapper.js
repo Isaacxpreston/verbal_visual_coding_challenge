@@ -9,23 +9,23 @@ import Footer from './footer'
 import MainSplash from './splash'
 import SecondSection from './second_section'
 
-const MainWrapper = React.createClass({
-	render () {
-		return (
-			<div>
+const MainWrapper = () => {
+	return (
+		<div>
+			<Layer zIndex="1">
 				<Background />
-				<Layer zIndex="2">
-					<MainSplash />
-					<SecondSection />
-					<Footer />
-				</Layer>
-				<Layer zIndex="3">
-					<NavBar />
-				</Layer>
-			</div>
-		)
-	}
-})
+			</Layer>
+			<Layer zIndex="2">
+				<MainSplash />
+				<SecondSection />
+				<Footer />
+			</Layer>
+			<Layer zIndex="3">
+				<NavBar />
+			</Layer>
+		</div>
+	)
+}
 
 
 export default MainWrapper
