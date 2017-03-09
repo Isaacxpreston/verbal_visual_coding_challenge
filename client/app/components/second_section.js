@@ -18,8 +18,6 @@ const styles = {
 		width: "100%",
 		height: "459px",
 		opacity: 0,
-		//change height on resize too
-		//media query component margins around 1120px
 	},
 	images_visible: {
 		position: "relative",
@@ -27,7 +25,7 @@ const styles = {
 		width: "100%",
 		height: "459px",
 		opacity: 0,
-		animation: "x 0.5s linear forwards", //add delays in handler
+		animation: "x 0.5s linear forwards",
 		animationName: fadeIn,
 	}
 }
@@ -54,39 +52,44 @@ const SecondSection = React.createClass({
 
   render () {
     return (
-      		<Component id="content" background="white" padding="7.5em">
-						<div style={{
-							margin: "auto",
-							paddingBottom: "1.25em",
-							fontSize: "1.85em",
-						}}>
-							Second Section Header
-						</div>
+			//media query component margins around 1120px
+			//fix padding for media queries
+			<Component id="content" background="white" padding="7.5em">
+				<div style={{
+					margin: "auto",
+					paddingBottom: "1.25em",
+					fontSize: "1.85em",
+					'@media (max-width: 550px)': {
+						paddingBottom: 0,
+					}
+				}}>
+					Second Section Header
+				</div>
 
-						<div style={this.state.container}>
-							<img src={require('../images/lines.png')} style= {{
-								zIndex: 2,
-								position: "absolute",
-								margin: "auto",
-								maxWidth: "100%",
-								top: this.state.parallax,
+				<div style={this.state.container}>
+					<img src={require('../images/lines.png')} style= {{
+						zIndex: 2,
+						position: "absolute",
+						margin: "auto",
+						maxWidth: "100%",
+						top: this.state.parallax,
 
-								left: 0,
-								bottom: 0,
-								right: 0,
-							}} />
-							<img src={require('../images/image2.jpg')} style={{
-								zIndex: 1,
-								position: "absolute",
-								margin: "auto",
-								maxWidth: "100%",
-								top: 0,
-								left: 0,
-								bottom: 0,
-								right: 0,
-							}} />
-						</div>
-					</Component>
+						left: 0,
+						bottom: 0,
+						right: 0,
+					}} />
+					<img src={require('../images/image2.jpg')} style={{
+						zIndex: 1,
+						position: "absolute",
+						margin: "auto",
+						maxWidth: "100%",
+						top: 0,
+						left: 0,
+						bottom: 0,
+						right: 0,
+					}} />
+				</div>
+			</Component>
     )
   }
 })

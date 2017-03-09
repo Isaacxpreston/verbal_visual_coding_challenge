@@ -11,24 +11,24 @@ const styles = {
     marginTop: "10em",
     marginBottom: "auto",
     marginLeft: "auto",
-    '@media (max-width: 800px)': {
-      margin: "auto"
+    '@media (max-width: 1000px)': {
+      // marginTop: "2.5em",
+      marginLeft: "auto",
+      marginRight: "auto"
+    },
+    '@media (max-height: 520px)': {
+      marginTop: "2.5em",
     }
   },
-
-  //  for button
-  //   '@media (max-width: 450px)': {
-  //     width: 183/1.5,
-  //     height: 46/1.5,
-  //     fontSize: 0.85/1.5 + "em",
-  //     marginRight: 12.5/1.5
-  //   }
-
+  
   header: {
     fontSize: "3em",
     textTransform: "uppercase",
     color: "white",
-    '@media (max-width: 450px)': {
+    '@media (max-width: 450px)': { //also 330 width for banner and header fonts
+      fontSize: "1.5em"
+    },
+    '@media (max-height: 380px)': {
       fontSize: "1.5em"
     }
   },

@@ -58,13 +58,20 @@ const NavBar = React.createClass({
           <div style={{
             margin: "auto",
             paddingLeft: "2em",
-            flex: 1
+            flex: 1,
+            '@media (max-width: 330px)': {
+              paddingLeft: "0.5em"
+            }
+            
             }}>
             abc creations
           </div> 
           <div style={{
             margin: "auto",
             paddingRight: "2em",
+            '@media (max-width: 330px)': {
+              paddingRight: "0.5em"
+            }
             }}>
             <svg fill="#103b58" height="36" viewBox="0 0 24 24" width="36">
               <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
