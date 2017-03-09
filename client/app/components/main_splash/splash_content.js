@@ -2,7 +2,7 @@ import React from 'react'
 import Radium from 'radium'
 
 import Button from './button'
-import {slide_in, slide_up, styles} from '../styles/splash_content_styles'
+import {slide_in, slide_up, styles} from '../../styles/main_splash_styles/splash_content_styles'
 
 const SplashContent = () => {
   return (

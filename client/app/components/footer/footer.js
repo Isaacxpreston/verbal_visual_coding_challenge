@@ -2,7 +2,7 @@ import React from 'react'
 import Radium from 'radium'
 
 import FooterLink from './footer_link'
-import styles from '../styles/footer_styles'
+import styles from '../../styles/footer_styles/footer_styles'
 
 const Footer = () => {
   return (

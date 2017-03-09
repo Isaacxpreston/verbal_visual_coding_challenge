@@ -1,6 +1,6 @@
 import React from 'react'
-import '../styles/button_styles.css'
-//Radium does not have the best support for selectors yet
+import '../../styles/main_splash_styles/button_styles.css'
+//CSS fallback, Radium does not have good support for selectors yet
 
 const Button = React.createClass({
 

@@ -3,15 +3,15 @@ import Radium from 'radium'
 
 import SplashContent from './splash_content'
 import Arrow from './arrow'
-import Button from './button'
-import styles from '../styles/splash_styles'
+// import Button from './button'
+import styles from '../../styles/main_splash_styles/splash_styles'
 
 const MainSplash = React.createClass({
 
   resize () {
-			this.setState({
-				height: window.innerHeight
-			})
+    this.setState({
+      height: window.innerHeight
+    })
 	},
 
   updateScroll () {

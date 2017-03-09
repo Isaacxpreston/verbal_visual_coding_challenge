@@ -1,6 +1,6 @@
 import React from 'react'
 import Radium from 'radium'
-import {fade_in, bounce, styles} from '../styles/arrow_styles'
+import {fade_in, bounce, styles} from '../../styles/main_splash_styles/arrow_styles'
 
 const Arrow = React.createClass({
   scroll () {

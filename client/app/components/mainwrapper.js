@@ -1,12 +1,11 @@
 import React from 'react'
 
 import '../fonts/karla.css'
-
 import Layer from './layer'
 import NavBar from './navbar'
 import Background from './background'
-import Footer from './footer'
-import MainSplash from './splash'
+import Footer from './footer/footer'
+import MainSplash from './main_splash/splash'
 import SecondSection from './second_section'
 
 const MainWrapper = () => {
