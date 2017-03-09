@@ -11,15 +11,10 @@ const Component = React.createClass({
 	},
 
 	componentWillMount () {
-		if (!this.props.rezise) {
 			this.setState({
-				height: "auto"
+				height: window.innerHeight
 			})
-		}
-		if (this.props.resize) {
 			window.addEventListener("resize", this.resize)
-			this.resize()
-		}
 	},
 
 	render() {
@@ -27,7 +22,6 @@ const Component = React.createClass({
 			<div style={{
 				opacity: this.props.opacity,
 				height: this.state.height,
-				background: this.props.background,
 				...styles.content
 			}}>
 				{this.props.children}

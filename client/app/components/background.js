@@ -4,7 +4,14 @@ import Radium from 'radium'
 
 import Layer from './layer'
 
-//add background cover css property
+const fade_in = Radium.keyframes({
+  "0%": {
+    background: "rgba(0, 0, 0, 1)"
+  },
+  "100%": {
+    background: "rgba(0, 0, 0, 0.5)"
+  }
+})
 
 const Background = React.createClass({
 
@@ -16,7 +23,10 @@ const Background = React.createClass({
           top: 0,
           left: 0,
           zIndex: "4",
-          background: "rgba(0, 0, 0, 0.5)",
+          background: "rgba(0, 0, 0, 1)",
+          animation: "x 1s ease forwards",
+          animationName: fade_in,
+          animationDelay: "0.25s",
           width: "100%",
           height: "100%"
         }}></div>

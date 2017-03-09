@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../fonts/open_sans.css'
+import '../fonts/karla.css'
 
 import Component from './component'
 import Layer from './layer'

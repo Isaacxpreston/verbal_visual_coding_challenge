@@ -54,6 +54,7 @@ const NavBar = React.createClass({
           background: "white",
           fontSize: "1.85em",
           textTransform: "uppercase",
+          boxShadow: "0px 1.5px 1.5px rgba(16, 59, 88, 0.3)"
         }}>
           <div style={{
             margin: "auto",
