@@ -1,44 +1,19 @@
 import React from 'react'
 import Radium from 'radium'
 
-const styles = {
-  content: {
-		display: "flex",
-		flexDirection: "column",
-    background: "white",
-	},
-  title: {
-    margin: "auto",
-    textTransform: "uppercase",
-    textAlign: "center",
-    fontWeight: "bold",
-    fontSize: "1.2em",
-    padding: "2px",
-  },
-  linkText: {
-    textAlign: "center",
-    fontSize: "0.85em",
-    padding: "2px",
-  }
-}
+import FooterLink from './footer_link'
+import styles from '../styles/footer_styles'
 
 const Footer = React.createClass( {
   render () {
   return (
     <div style={styles.content}>
-    <div style={{
-      margin: "auto",
-      paddingTop: "8.5em",
-      paddingBottom: "8.5em",
-      '@media (max-width: 600px)': {
-        paddingTop: 0
-      }
-    }}>	
+    <div style={styles.wrapper}>	
       <div style={styles.title}>Footer Title</div>
-      <div style={styles.linkText}>Footer Link 1</div>
-      <div style={styles.linkText}>Footer Link 2</div>
-      <div style={styles.linkText}>Footer Link 3</div>
-      <div style={styles.linkText}>Footer Link 4</div>
+      <FooterLink>Footer Link 1</FooterLink>
+      <FooterLink>Footer Link 2</FooterLink>
+      <FooterLink>Footer Link 3</FooterLink>
+      <FooterLink>Footer Link 4</FooterLink>
     </div>
     </div>
   )

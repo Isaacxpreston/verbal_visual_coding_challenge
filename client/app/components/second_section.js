@@ -1,34 +1,7 @@
 import React from 'react'
-import Component  from './component'
 import Radium from 'radium'
 
-const fadeIn = Radium.keyframes({
-	'0%': {
-		opacity: 0
-	},
-	'100%': {
-		opacity: 1
-	}
-})
-
-const styles = {
-	images_hidden: {
-		position: "relative",
-		margin: "auto",
-		width: "100%",
-		height: "459px",
-		opacity: 0,
-	},
-	images_visible: {
-		position: "relative",
-		margin: "auto",
-		width: "100%",
-		height: "459px",
-		opacity: 0,
-		animation: "x 0.5s linear forwards",
-		animationName: fadeIn,
-	}
-}
+import {fade_in, styles} from '../styles/second_section_styles'
 
 const SecondSection = React.createClass({
 	scroll () {
@@ -38,7 +11,7 @@ const SecondSection = React.createClass({
 			})
 		}
 		this.setState({
-			parallax: - (window.scrollY - (window.innerHeight + 50)) / 7.5
+			parallax: - (window.scrollY - (window.innerHeight + 50)) / 5
 		})
 	},
 
@@ -52,8 +25,6 @@ const SecondSection = React.createClass({
 
   render () {
     return (
-			//media query component margins around 1120px
-			//fix padding for media queries
 			<div style={{
 				display: "flex",
 				flexDirection: "column",

@@ -19,7 +19,6 @@ const Button = React.createClass({
             {this.props.children}
           </div>
         </div>
-
         <div id="button">
           <svg width="183" height="46"  className="svg-defs">
             <symbol id={this.state.symbol}>
