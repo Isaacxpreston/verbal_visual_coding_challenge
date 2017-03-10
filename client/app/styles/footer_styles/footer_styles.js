@@ -8,7 +8,7 @@ const styles = {
     margin: "auto",
     paddingTop: "8.5em",
     paddingBottom: "8.5em",
-    '@media (max-width: 600px)': {
+    '@media handheld, screen and  (max-width: 600px)': {
       paddingTop: 0
     }
   },

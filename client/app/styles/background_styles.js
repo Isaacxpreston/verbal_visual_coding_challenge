@@ -16,7 +16,7 @@ export const styles = {
     top: 0,
     left: 0,
     width: "100%",
-    '@media (max-width: 1200px)': {
+    '@media handheld, screen and  (max-width: 1200px)': {
       width: 1200,
     }
   },

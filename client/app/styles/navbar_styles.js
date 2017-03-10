@@ -11,7 +11,7 @@ const styles = {
   hamburger: {
     margin: "auto",
     paddingRight: "2em",
-    '@media (max-width: 330px)': {
+    '@media handheld, screen and  (max-width: 330px)': {
       paddingRight: "0.5em"
     }
   },
@@ -19,7 +19,7 @@ const styles = {
     margin: "auto",
     paddingLeft: "2em",
     flex: 1,
-    '@media (max-width: 330px)': {
+    '@media handheld, screen and  (max-width: 330px)': {
       paddingLeft: "0.5em"
     }         
   }

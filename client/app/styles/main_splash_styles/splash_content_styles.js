@@ -28,11 +28,11 @@ export const styles = {
     marginTop: "10em",
     marginBottom: "auto",
     marginLeft: "auto",
-    '@media (max-width: 1000px)': {
+    '@media handheld, screen and  (max-width: 1000px)': {
       marginLeft: "auto",
       marginRight: "auto"
     },
-    '@media (max-height: 520px)': {
+    '@media handheld, screen and  (max-height: 520px)': {
       marginTop: "2.5em",
     }
   },
@@ -44,10 +44,10 @@ export const styles = {
     animation: "x 0.8s ease forwards",
     animationName: slide_in,
     color: "white",
-    '@media (max-width: 450px)': {
+    '@media handheld, screen and  (max-width: 450px)': {
       fontSize: "2em"
     },
-    '@media (max-height: 380px)': {
+    '@media handheld, screen and  (max-height: 380px)': {
       fontSize: "1.5em"
     }
   },

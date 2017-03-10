@@ -22,7 +22,7 @@ export const styles = {
 		margin: "auto",
 		paddingBottom: "1.25em",
 		fontSize: "1.85em",
-		'@media (max-width: 550px)': {
+		'@media handheld, screen and  (max-width: 550px)': {
 			paddingBottom: 0,
 			fontSize: "1.5em"
 		}
